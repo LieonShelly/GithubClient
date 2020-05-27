@@ -53,18 +53,9 @@ class ViewController: UIViewController {
         
         loginBtn.rx.tap
             .subscribe(onNext: { () in
-//                let loginProvider = MoyaProvider<User>()
-//                loginProvider.rx.request(.login(["client_id": "1f0f680ebb4d06f44b1a"]))
-//                    .subscribe(onSuccess: { (response) in
-//                        let data = response.data
-//                    }, onError: nil)
-//                    .disposed(by: self.bag)
-//                let webVC = OAuthViewController("https://github.com/login/oauth/authorize?client_id=1f0f680ebb4d06f44b1a")
-//                self.present(webVC, animated: true, completion: nil)
                 self.presenter?.showLogin(with: "https://github.com/login/oauth/authorize?client_id=1f0f680ebb4d06f44b1a")
-                
             })
-        .disposed(by: bag)
+            .disposed(by: bag)
     }
     
     
@@ -82,7 +73,7 @@ class ViewRouter {
         view.presenter = presenter
         return view
     }
-
+    
     func presentLoginScreen(_ url: String, from: ViewController) {
         let loginVC = LoginRouter.createLoginModule(url)
         from.present(loginVC, animated: true, completion: nil)

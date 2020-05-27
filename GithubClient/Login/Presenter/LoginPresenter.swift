@@ -6,9 +6,16 @@
 //  Copyright © 2020 lieon. All rights reserved.
 //
 
-import UIKit
+import Moya
+import RxSwift
+import RxCocoa
 
 class LoginPresenter {
     weak var view: OAuthViewController?
     var interactor: LoginInteractor?
+    
+    
+    func requestUserAuth(_ code: String) {
+        interactor?.requestUserAuth(code)
+    }
 }
