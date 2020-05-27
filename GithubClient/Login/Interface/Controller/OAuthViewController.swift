@@ -22,6 +22,7 @@ class OAuthViewController: UIViewController {
     }()
     var urlStr: String?
     let bag = DisposeBag()
+    var presenter: LoginPresenter?
     
     convenience init(_ url: String) {
         self.init()

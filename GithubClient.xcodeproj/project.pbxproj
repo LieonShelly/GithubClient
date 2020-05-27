@@ -21,6 +21,10 @@
 		CD67E43524776D660071B620 /* GithubClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67E43424776D660071B620 /* GithubClientUITests.swift */; };
 		CD6E06C02478F8D600CC1ADE /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E06BF2478F8D600CC1ADE /* OAuthViewController.swift */; };
 		CD6E06C3247906D700CC1ADE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E06C2247906D700CC1ADE /* Common.swift */; };
+		CDF46169247D080D00897CD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF46168247D080D00897CD5 /* User.swift */; };
+		CDF4616B247D0B1B00897CD5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4616A247D0B1B00897CD5 /* LoginPresenter.swift */; };
+		CDF4616D247D0B4200897CD5 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4616C247D0B4200897CD5 /* LoginInteractor.swift */; };
+		CDF4616F247D0B5A00897CD5 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF4616E247D0B5A00897CD5 /* LoginRouter.swift */; };
 		D8F3E68B8B18A47C1D3ABAFE /* Pods_GithubClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FF4B5C8625341E310EB6C5 /* Pods_GithubClientUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,10 @@
 		CD67E43624776D660071B620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6E06BF2478F8D600CC1ADE /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		CD6E06C2247906D700CC1ADE /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		CDF46168247D080D00897CD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CDF4616A247D0B1B00897CD5 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CDF4616C247D0B4200897CD5 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		CDF4616E247D0B5A00897CD5 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		DDC0A4272E943B99406EF1E9 /* Pods-GithubClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubClient.debug.xcconfig"; path = "Target Support Files/Pods-GithubClient/Pods-GithubClient.debug.xcconfig"; sourceTree = "<group>"; };
 		F86AD6BD33E3DBC596807322 /* Pods_GithubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,7 +110,11 @@
 		CD3ABE782478F5A400F28E52 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CD6E06BF2478F8D600CC1ADE /* OAuthViewController.swift */,
+				CDF46167247D074800897CD5 /* Entity */,
+				CDF46165247D073600897CD5 /* Interactor */,
+				CDF46164247D072C00897CD5 /* Router */,
+				CDF46163247D072600897CD5 /* Presenter */,
+				CDF46162247D071900897CD5 /* Interface */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -195,6 +207,62 @@
 				CD6E06C2247906D700CC1ADE /* Common.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CDF46160247D06FB00897CD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDF46161247D070600897CD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD6E06BF2478F8D600CC1ADE /* OAuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CDF46162247D071900897CD5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CDF46161247D070600897CD5 /* Controller */,
+				CDF46160247D06FB00897CD5 /* View */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		CDF46163247D072600897CD5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4616A247D0B1B00897CD5 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CDF46164247D072C00897CD5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4616E247D0B5A00897CD5 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CDF46165247D073600897CD5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4616C247D0B4200897CD5 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CDF46167247D074800897CD5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CDF46168247D080D00897CD5 /* User.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		E84E1D8F3485BC881702C20A /* Pods */ = {
@@ -444,9 +512,13 @@
 				CD5FA1482477B909007148C3 /* Trending.swift in Sources */,
 				CD67E41724776D610071B620 /* ViewController.swift in Sources */,
 				CD67E41324776D610071B620 /* AppDelegate.swift in Sources */,
+				CDF4616B247D0B1B00897CD5 /* LoginPresenter.swift in Sources */,
 				CD5FA1442477B8CA007148C3 /* Service.swift in Sources */,
+				CDF46169247D080D00897CD5 /* User.swift in Sources */,
 				CD6E06C02478F8D600CC1ADE /* OAuthViewController.swift in Sources */,
 				CD5FA14A2477B95A007148C3 /* Medium.swift in Sources */,
+				CDF4616F247D0B5A00897CD5 /* LoginRouter.swift in Sources */,
+				CDF4616D247D0B4200897CD5 /* LoginInteractor.swift in Sources */,
 				CD6E06C3247906D700CC1ADE /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
